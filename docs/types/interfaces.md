@@ -14,7 +14,7 @@ interface Point {
 declare var myPoint: Point;
 ```
 
-However the beauty of *Sample B* is that if someone authors a library that builds on the `myPoint` library to add new members, they can easily add to the existing declaration of `myPoint`:
+However the beauty of *Sample B* is that if someone authors a library that builds on the `myPoint` library to add new members, they can easily add to the existing declaration of `Point`:
 
 ```ts
 // Lib a.d.ts
@@ -37,7 +37,7 @@ This is because **interfaces in TypeScript are open ended**. This is a vital ten
 
 ## Classes can implement interfaces
 
-If you want to use *classes* that must follow and object structure that someone declared for you in an `interface` you can use the implements keyword to ensure compatibility.
+If you want to use *classes* that must follow an object structure that someone declared for you in an `interface` you can use the implements keyword to ensure compatibility.
 
 ```ts
 interface Point {
@@ -49,7 +49,7 @@ class MyPoint implements Point {
 }
 ```
 
-Basically in the presence of that implements any changes in that external `Point` interface will result in a compile error in your code base so you can easily keep it in sync.
+Basically in the presence of that *implements* any changes in that external `Point` interface will result in a compile error in your code base so you can easily keep it in sync.
 
 ```ts
 interface Point {
@@ -75,7 +75,7 @@ And stuff like `foo: Point = MyPoint` is not the same thing.
 
 ### Not every interface is implementable easily
 
-Interfaces are designed to declare *any arbitrarily crazy* structure in that might be present in JavaScript.
+Interfaces are designed to declare *any arbitrarily crazy* structure that might be present in JavaScript.
 
 Consider the following interface where something is callable with `new`
 
